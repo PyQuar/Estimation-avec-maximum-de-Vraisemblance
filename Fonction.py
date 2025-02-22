@@ -26,7 +26,7 @@ def display_notebook_charts(notebook_path):
                         try:
                             # Decode the PNG image and display it with Streamlit
                             image_data = base64.b64decode(output.data['image/png'])
-                            st.image(image_data, use_column_width=True)
+                            st.image(image_data, use_container_width=True)
                         except Exception as e:
                             st.error(f"Error displaying Matplotlib plot: {e}")
                     elif 'text/plain' in output.data:
